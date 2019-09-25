@@ -17,11 +17,27 @@ repos = [ 'https://github.com/elm/compiler',              # 2013-10-22 ~> 11219
           'https://github.com/elixir-lang/elixir',        # 2015-09-01 ~> 81305
           'https://github.com/jagajaga/syava-lang' ]      # 2016-04-20 ~> 4637
 
+mvps0 = [ '2013-10-22',
+          '1995-09-12',
+          '2017-02-28',
+          '2001-10-07',
+          '2014-07-27',
+          '2015-09-01',
+          '2016-04-20' ]
+
+def mkMvps(xs, ys):
+  ret = {}
+  for j,x in enumerate(xs):
+    ret[os.path.basename(x)] = ys[j]
+  return ret
+
+mvps = mkMvps(repos, mvps0)
+
 data = 'data'
 
 def fetch(url):
   print >> sys.stderr, "Fetching " + url + "..."
-  time.sleep(0.01 + random.random() / 2)
+  time.sleep(0.05 + random.random() / 4)
   resp = r.get(url)
   if resp.status_code == 200:
     return BeautifulSoup(resp.content, 'html.parser')
@@ -57,7 +73,10 @@ def issues(x, page):
 
 def pages(soup):
   pgs = soup.select('div.pagination')
-  return int(pgs[0].find_all('a')[-2].string)
+  if len(pgs) > 0:
+    return int(pgs[0].find_all('a')[-2].string)
+  else:
+    return 1
 
 def issuesInfo(soup):
   ret = []
@@ -80,6 +99,15 @@ def issuesInfo(soup):
 def dunpIssues(iss):
   print(iss)
 
+def actualizePRs():
+  import prs
+  ret = {}
+  for compiler in mvps:
+    ret[compiler] = filter(lambda x: x['closed'] < u'' + mvps[compiler], prs.prs[compiler])
+  return ret
+
 if __name__ == '__main__':
-  provision()
-  allIssuelike(lambda x: '/pulls?page=' + str(x) + '&q=is%3Apr+is%3Aclosed')
+  #provision()
+  #allIssuelike(lambda x: '/pulls?page=' + str(x) + '&q=is%3Apr+is%3Aclosed')
+  #allIssuelike(lambda x: '/issues?page=' + str(x) + '&q=is%3Aissue+is%3Aclosed')
+  pp.pprint(actualizePRs())
