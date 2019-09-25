@@ -1,4 +1,5 @@
-{ 'compiler': [ { 'closed': u'2013-02-02T05:36:26Z',
+prs = { 'compiler':
+              [ { 'closed': u'2013-02-02T05:36:26Z',
                   'delta': 1,
                   'opened': u'2013-02-01T04:02:43Z',
                   'title': 'Topic/no main',

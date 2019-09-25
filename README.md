@@ -14,3 +14,9 @@ run `../../../findwcl.sh` to count the amount of non-empty lines in the
 source files, or run `../../../findls.sh > flist`, and edit `flist` to
 have only the files you care about. Afterwards, run
 `cat flist | xargs sed '/^\s*$/d' | wc -l`.
+
+# Scripts
+
+`fetch.py` is a script that has functions to clone repos, scrape
+issues, pull requests and actualize it, filtering ones that were made
+after MVP releases that we deem appropriate.
