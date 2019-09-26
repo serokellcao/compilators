@@ -1,0 +1,19 @@
+Special contest for SYaVA-Lang
+51 special.txt
+ 37 files changed, 5067 insertions(+), 21 deletions(-)
+
+Special contest for Morley
+255 special.txt
+ 394 files changed, 12887 insertions(+), 3608 deletions(-)
+
+94 .*Ivan.*
+91 .*martoon.*
+51 jagajaga
+38 .*rvem.*
+16 .*Roman Melnikov.*
+10 .*Peresadin.*
+3  .*Burnham.*
+1  .*Андреев.*
+1  .*Andreev.*
+1  .*Haver.*
+

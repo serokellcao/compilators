@@ -1,1 +1,1 @@
-nix-shell -p python2 pythonPackages.beautifulsoup4 pythonPackages.requests
+nix-shell -p python2 pythonPackages.beautifulsoup4 pythonPackages.requests pythonPackages.matplotlib npm

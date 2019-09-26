@@ -1,0 +1,31 @@
+Density report for Elm
+672 density.txt
+ 157 files changed, 9417 insertions(+), 5942 deletions(-)
+
+Density report for Morley
+644 density.txt
+ 462 files changed, 29217 insertions(+), 1344 deletions(-)
+
+Density report for Elixir
+527 density.txt
+ 256 files changed, 9059 insertions(+), 4455 deletions(-)
+
+Density report for MLton
+348 density.txt
+ 481 files changed, 38138 insertions(+), 20914 deletions(-)
+
+Density report for PureScript
+332 density.txt
+ 116 files changed, 4646 insertions(+), 1967 deletions(-)
+
+Density report for OCaml
+245 density.txt
+ 550 files changed, 36562 insertions(+), 5238 deletions(-)
+
+Density report for SYaVA-Lang
+50 density.txt
+ 37 files changed, 5067 insertions(+), 21 deletions(-)
+
+Density report for Kitten
+44 density.txt
+ 81 files changed, 2228 insertions(+), 695 deletions(-)
